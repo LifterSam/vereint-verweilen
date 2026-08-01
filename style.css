@@ -70,6 +70,27 @@ p {
     margin-top: 12px;
 }
 
+/* ---------- Button-Gruppe (Block 1) ---------- */
+.button-gruppe {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 12px;
+}
+
+.button-sekundaer {
+    background-color: transparent;
+    color: #3B6D11;
+    border: 1px solid #3B6D11;
+}
+
+/* ---------- Quellenangabe (Block 2) ---------- */
+.quelle {
+    font-size: 11px;
+    color: #888780;
+    margin-top: 8px;
+}
+
 /* ---------- Block 1: Hook ---------- */
 .hook {
     text-align: center;
