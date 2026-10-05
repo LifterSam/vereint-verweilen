@@ -86,13 +86,13 @@ h3,
 }
 
 h1 {
-  font-size: 40px;
+  font-size: 30px;
   font-weight: 700;
   margin-bottom: var(--unter-h);
 }
 
 h2 {
-  font-size: 34px;
+  font-size: 28px;
   font-weight: 700;
   text-transform: uppercase;
   text-align: center;
@@ -272,8 +272,7 @@ section.blick {
 .hero {
   min-height: 595px;
   display: flex;
-  background: linear-gradient(rgba(39, 51, 26, .55), rgba(39, 51, 26, .55)),
-    url("images/hero-haus-auf-dem-dorf.jpg") center / cover;
+  background: url("images/hero-haus-auf-dem-dorf.jpg") center / cover;
   color: var(--hell);
   text-align: center;
   padding: 24px 0;
@@ -294,9 +293,6 @@ section.blick {
   margin-bottom: 20px;
 }
 
-.hero h1 {
-  font-size: 32px;
-}
 
 .hero .lead {
   font-size: 16px;
@@ -429,7 +425,8 @@ section.blick {
 
 /* ===== Banner / CTA mit Bild ===== */
 .banner {
-  background: linear-gradient(rgba(39, 51, 26, .65), rgba(39, 51, 26, .65)), url("images/bauernhaus.jpg") center / cover;
+  padding: 30px 0;
+  background: linear-gradient(rgba(13, 17, 9, 0.65), rgba(13, 17, 9, 0.65)), url("images/bauernhaus.jpg") center / cover;
   color: var(--hell);
   text-align: center;
 }
