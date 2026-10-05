@@ -1,281 +1,558 @@
-/* ---------- Grundeinstellungen ---------- */
+/* ===== Variablen (Guide) ===== */
+:root {
+  --hell: #FDFFFA;
+  --hell2: #ECF2E7;
+  --dunkel: #27331A;
+  --orange: #FFA233;
+  --orange-hover: #CC7E1F;
+
+  --seite: 24px;
+  /* Seitenabstand */
+  --spalten: 4;
+  --gap: 16px;
+  --abschnitt: 80px;
+  /* über/unter Abschnitt */
+  --unter-h: 40px;
+  /* unter H1-H3 */
+  --unter-titel: 20px;
+  --unter-text: 40px;
+  --box: 20px;
+  /* Innenabstand Boxen/Kacheln */
+
+  --font-head: 'Roboto Slab', Georgia, serif;
+  --font-text: 'Barlow', Arial, sans-serif;
+}
+
+@media (min-width: 768px) {
+  :root {
+    --seite: 40px;
+    --spalten: 8;
+    --gap: 24px;
+  }
+}
+
+@media (min-width: 1024px) {
+  :root {
+    --seite: 64px;
+    --spalten: 12;
+    --gap: 32px;
+    --abschnitt: 160px;
+    --unter-h: 80px;
+    --unter-titel: 40px;
+    --unter-text: 80px;
+  }
+}
+
+/* ===== Basis ===== */
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px;
 }
 
 body {
-    font-family: 'D-DIN', sans-serif;
-    color: #2C2C2A;
-    background-color: #F7F5EF;
-    line-height: 1.5;
-    font-size: 15px;
+  font-family: var(--font-text);
+  font-size: 16px;
+  line-height: 2;
+  font-weight: 400;
+  color: var(--dunkel);
+  background: var(--hell);
 }
 
 img {
-    max-width: 100%;
-    display: block;
+  max-width: 100%;
+  display: block;
 }
 
 a {
-    color: inherit;
+  color: var(--orange-hover);
 }
 
-/* ---------- Globale Überschriften & Text ---------- */
+ul {
+  list-style: none;
+}
+
+h1,
+h2,
+h3,
+.titel {
+  font-family: var(--font-head);
+  line-height: 1.2;
+}
+
 h1 {
-    font-size: 24px;
-    font-weight: 500;
-    margin-bottom: 8px;
+  font-size: 40pt;
+  font-weight: 700;
+  margin-bottom: var(--unter-h);
 }
 
 h2 {
-    font-size: 19px;
-    font-weight: 500;
-    margin-top: 24px;
-    margin-bottom: 16px;
+  font-size: 34pt;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: var(--unter-h);
 }
 
 h3 {
-    font-size: 17px;
-    font-weight: 500;
-    margin-top: 18px;
-    margin-bottom: 8px;
+  font-size: 24pt;
+  font-weight: 600;
+  margin-bottom: var(--unter-h);
 }
 
-h4 {
-    font-size: 15px;
-    font-weight: 700;
-    margin-top: 14px;
-    margin-bottom: 6px;
+.titel {
+  font-size: 22pt;
+  font-weight: 600;
+  line-height: 2;
+  margin-bottom: var(--unter-titel);
+}
+
+.lead {
+  font-size: 18pt;
+  font-weight: 500;
+  text-transform: uppercase;
+  margin-bottom: var(--unter-text);
+}
+
+.highlight {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.small {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.2;
 }
 
 p {
-    font-size: 15px;
-    margin-bottom: 12px;
+  margin-bottom: var(--unter-text);
 }
 
-li {
-    font-size: 15px;
-    margin-bottom: 6px;
+p:last-child {
+  margin-bottom: 0;
 }
 
-.klein {
-    font-size: 13px;
-    color: #5F5E5A;
-}
-
-/* ---------- Layout: Blöcke ---------- */
-.block {
-    padding: 32px 20px;
-    border-bottom: 1px solid #D3D1C7;
-}
-
-.block:last-child {
-    border-bottom: none;
-}
-
-/* ---------- Buttons ---------- */
-.button {
-    display: inline-block;
-    background-color: #3B6D11;
-    color: #fff;
-    text-decoration: none;
-    padding: 12px 20px;
-    border-radius: 8px;
-    font-size: 14px;
-    margin-top: 12px;
-}
-
-.button-gruppe {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    margin-top: 12px;
-}
-
-.button-sekundaer {
-    background-color: transparent;
-    color: #3B6D11;
-    border: 1px solid #3B6D11;
-}
-
-/* ---------- Quellenangabe (Block 2) ---------- */
-.quelle {
-    font-size: 11px;
-    color: #888780;
-    margin-top: 8px;
-}
-
-/* ---------- Block 1: Hook ---------- */
-.hook {
-    text-align: center;
-}
-
-.logo {
-    width: 400px;
-    margin: 0 auto 32px;
-}
-
-.subline {
-    color: #5F5E5A;
-    font-size: 16px;
-}
-
-.hero-image {
-    margin-top: 20px;
-    border-radius: 8px;
-}
-
-/* ---------- Block 2: Zahlen ---------- */
-.zahlen-grid {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-}
-
-.zahl {
-    background-color: #fff;
-    border: 1px solid #D3D1C7;
-    border-radius: 8px;
-    padding: 16px;
-    text-align: center;
-}
-
-.zahl-wert {
-    display: block;
-    font-size: 24px;
-    font-weight: 500;
-    color: #173404;
-    margin-bottom: 4px;
-}
-
-.zahl-text {
-    display: block;
-    font-size: 13px;
-    color: #5F5E5A;
-}
-
-/* ---------- Tag-Listen (Projekt, Geschäftsmodell) ---------- */
-.tag-liste {
-    list-style: none;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-    margin: 12px 0;
-}
-
-.tag-liste li {
-    background-color: #EAF3DE;
-    color: #27500A;
-    font-size: 13px;
-    padding: 6px 12px;
-    border-radius: 16px;
-    margin-bottom: 0;
-}
-
-/* ---------- Block 5: Zielgruppen ---------- */
-.karte {
-    background-color: #fff;
-    border: 1px solid #D3D1C7;
-    border-radius: 8px;
-    padding: 16px;
-    margin-bottom: 12px;
-}
-
-.karte-primary {
-    border-color: #3B6D11;
-}
-
-/* ---------- Block 7: Team ---------- */
-.team-mitglied {
-    text-align: center;
-    margin-bottom: 24px;
-}
-
-.team-mitglied img {
-    width: 150px;
-    height: 150px;
-    object-fit: cover;
-    border-radius: 50%;
-    margin: 0 auto 5px;
-}
-
-.name {
-    font-weight: 500;
-    margin-bottom: 2px;
-}
-
-.rolle {
-    font-size: 13px;
-    color: #5F5E5A;
-}
-
-/* ---------- Block 8: Kontakt ---------- */
-.kontakt {
-    text-align: center;
-    background-color: #2C2C2A;
-    color: #F7F5EF;
-}
-
-.kontakt a {
-    color: #F7F5EF;
-}
-
-/* ---------- Rechtstexte (Impressum, Datenschutz) ---------- */
-.rechtstext {
-    max-width: 700px;
-}
-
-.rechtstext a {
-    text-decoration: underline;
-}
-
-.zurueck {
-    display: inline-block;
-    margin-bottom: 20px;
-    font-size: 13px;
-    color: #5F5E5A;
-    text-decoration: none;
-}
-
-.rechtslinks {
-    margin-top: 20px;
-    margin-right: 10px;
-    margin-left: 10px;
-    font-size: 12px;
-}
-
-.rechtslinks a {
-    text-decoration: underline;
-}
-
-/* ---------- Ab hier: größere Bildschirme (Desktop) ---------- */
 @media (min-width: 768px) {
+  body {
+    font-size: 18px;
+  }
 
-    .block {
-        padding: 60px 40px;
-        max-width: 900px;
-        margin: 0 auto;
-    }
+  h1 {
+    font-size: 64pt;
+  }
 
-    .zahlen-grid {
-        flex-direction: row;
-    }
+  h2 {
+    font-size: 48pt;
+  }
 
-    .zahl {
-        flex: 1;
-    }
+  h3 {
+    font-size: 32pt;
+  }
 
-    .team {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 24px;
-    }
+  .titel {
+    font-size: 24pt;
+  }
 
-    .team h2 {
-        width: 100%;
-    }
+  .lead {
+    font-size: 22pt;
+  }
 
+  .highlight {
+    font-size: 18px;
+  }
+
+  .small {
+    font-size: 15px;
+  }
 }
+
+/* ===== Layout ===== */
+.wrap {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 var(--seite);
+}
+
+section {
+  padding: var(--abschnitt) 0;
+}
+
+section.hell2 {
+  background: var(--hell2);
+}
+
+section.blick {
+  padding: calc(var(--abschnitt) / 2) 0;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(var(--spalten), 1fr);
+  gap: var(--gap);
+}
+
+.grid>* {
+  grid-column: 1 / -1;
+}
+
+/* ===== Buttons ===== */
+.btn {
+  display: inline-block;
+  background: var(--orange);
+  color: var(--dunkel);
+  font-weight: 700;
+  line-height: 1.2;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 14px 28px;
+  border-radius: 4px;
+}
+
+.btn:hover,
+.btn:focus {
+  background: var(--orange-hover);
+}
+
+/* ===== Navigation (reines CSS, ohne Menü-Toggle) ===== */
+.nav {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: var(--hell);
+  border-bottom: 1px solid var(--hell2);
+}
+
+.nav .wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 72px;
+}
+
+.nav img {
+  height: 44px;
+  width: auto;
+}
+
+.nav ul {
+  display: none;
+  gap: 24px;
+}
+
+.nav ul a {
+  color: var(--dunkel);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 1.2;
+}
+
+.nav ul a:hover {
+  color: var(--orange-hover);
+}
+
+.nav .btn {
+  padding: 10px 20px;
+  font-size: 14px;
+}
+
+@media (min-width: 1024px) {
+  .nav ul {
+    display: flex;
+  }
+}
+
+/* ===== Hero ===== */
+.hero {
+  background: linear-gradient(rgba(39, 51, 26, .55), rgba(39, 51, 26, .55)), url("images/hero-haus-auf-dem-dorf.jpg") center / cover;
+  color: var(--hell);
+  text-align: center;
+  padding: var(--abschnitt) 0;
+}
+
+.hero .lead {
+  margin-bottom: var(--unter-h);
+}
+
+.hero p:not(.lead) {
+  max-width: 900px;
+  margin: 0 auto var(--unter-text);
+}
+
+/* ===== Auf einen Blick ===== */
+.blick .grid>div {
+  grid-column: span 2;
+  text-align: center;
+}
+
+.blick img {
+  width: 64px;
+  height: 64px;
+  margin: 0 auto 8px;
+}
+
+.blick .titel {
+  margin-bottom: 0;
+  line-height: 1.4;
+}
+
+@media (min-width: 768px) {
+  .blick .grid>div {
+    grid-column: span 2;
+  }
+}
+
+@media (min-width: 1024px) {
+  .blick .grid>div {
+    grid-column: span 3;
+  }
+}
+
+/* ===== Zweispaltig (Warum jetzt / Konzept) ===== */
+.zwei {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--gap);
+  align-items: center;
+}
+
+@media (min-width: 1024px) {
+  .zwei {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.textbox {
+  background: var(--dunkel);
+  color: var(--hell);
+  padding: var(--box);
+}
+
+.textbox h3 {
+  font-size: 22pt;
+  margin-bottom: var(--unter-titel);
+}
+
+.textbox p {
+  margin-bottom: 0;
+}
+
+.konzept li {
+  padding-left: 1.2em;
+  text-indent: -1.2em;
+  margin-bottom: 8px;
+  line-height: 1.6;
+}
+
+.konzept li::before {
+  content: "• ";
+}
+
+.konzept li strong {
+  font-weight: 700;
+}
+
+/* ===== Kacheln (Wirkung) ===== */
+.kachel {
+  background: var(--dunkel);
+  color: var(--hell);
+}
+
+.kachel img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.kachel div {
+  padding: var(--box);
+}
+
+.kachel .titel {
+  text-transform: uppercase;
+  font-size: 18pt;
+  line-height: 1.4;
+}
+
+.kachel li {
+  line-height: 1.5;
+  margin-bottom: 6px;
+  padding-left: 1em;
+  text-indent: -1em;
+  font-size: 15px;
+}
+
+.kachel li::before {
+  content: "• ";
+}
+
+@media (min-width: 768px) {
+  .kachel {
+    grid-column: span 4;
+  }
+}
+
+@media (min-width: 1024px) {
+  .kachel {
+    grid-column: span 4;
+  }
+}
+
+/* ===== Banner / CTA mit Bild ===== */
+.banner {
+  background: linear-gradient(rgba(39, 51, 26, .65), rgba(39, 51, 26, .65)), url("images/bauernhaus.jpg") center / cover;
+  color: var(--hell);
+  text-align: center;
+}
+
+.banner p {
+  max-width: 900px;
+  margin: 0 auto var(--unter-text);
+}
+
+/* ===== Team ===== */
+.team {
+  text-align: center;
+}
+
+.team .person {
+  grid-column: span 2;
+}
+
+.team .person img {
+  width: 160px;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid var(--dunkel);
+  margin: 0 auto 8px;
+}
+
+.team .rolle {
+  font-weight: 700;
+  text-transform: uppercase;
+  line-height: 1.4;
+}
+
+.team .zitat {
+  font-size: 15px;
+  line-height: 1.4;
+  font-style: italic;
+  margin-top: 8px;
+}
+
+.team p {
+  margin: 0;
+}
+
+.kompetenzen {
+  background: var(--dunkel);
+  color: var(--hell);
+  padding: var(--box) var(--seite);
+  margin-top: var(--unter-text);
+}
+
+.kompetenzen ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px 32px;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.kompetenzen li {
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+@media (min-width: 768px) {
+  .team .person {
+    grid-column: span 4;
+  }
+}
+
+@media (min-width: 1024px) {
+  .team .person {
+    grid-column: span 3;
+  }
+}
+
+/* ===== Unterstützung ===== */
+.unterstuetzung .grid>div {
+  text-align: center;
+}
+
+.unterstuetzung .titel {
+  text-transform: uppercase;
+  margin-bottom: 0;
+}
+
+@media (min-width: 1024px) {
+  .unterstuetzung .grid>div {
+    grid-column: span 6;
+  }
+}
+
+/* ===== Kontakt ===== */
+.kontakt-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--gap);
+  text-align: center;
+}
+
+.kontakt-box img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+@media (min-width: 768px) {
+  .kontakt-box {
+    flex-direction: row;
+    justify-content: center;
+    text-align: left;
+  }
+}
+
+/* ===== Footer ===== */
+footer {
+  background: var(--dunkel);
+  color: var(--hell);
+  text-align: center;
+  padding: var(--abschnitt) 0 40px;
+}
+
+footer img {
+  height: 56px;
+  width: auto;
+  margin: 0 auto 24px;
+}
+
+footer a {
+  color: var(--hell);
+}
+
+footer ul {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-bottom: 24px;
+}
+
+footer p {
+  margin: 0;
+  line-height: 1.4;
+}
+
