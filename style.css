@@ -19,8 +19,8 @@
   --box: 20px;
   /* Innenabstand Boxen/Kacheln */
 
-  --font-head: 'Roboto Slab', Georgia, serif;
-  --font-text: 'Barlow', Arial, sans-serif;
+  --font-head: 'Roboto Slab', 'Comic Sans MS', sans-serif;
+  --font-text: 'Barlow', 'Impact', sans-serif;
 }
 
 @media (min-width: 768px) {
@@ -57,7 +57,7 @@ html {
 
 body {
   font-family: var(--font-text);
-  font-size: 16px;
+  font-size: 14px;
   line-height: 2;
   font-weight: 400;
   color: var(--dunkel);
@@ -86,13 +86,13 @@ h3,
 }
 
 h1 {
-  font-size: 40pt;
+  font-size: 40px;
   font-weight: 700;
   margin-bottom: var(--unter-h);
 }
 
 h2 {
-  font-size: 34pt;
+  font-size: 34px;
   font-weight: 700;
   text-transform: uppercase;
   text-align: center;
@@ -100,22 +100,21 @@ h2 {
 }
 
 h3 {
-  font-size: 24pt;
+  font-size: 24px;
   font-weight: 600;
   margin-bottom: var(--unter-h);
 }
 
 .titel {
-  font-size: 22pt;
+  font-size: 22px;
   font-weight: 600;
   line-height: 2;
   margin-bottom: var(--unter-titel);
 }
 
 .lead {
-  font-size: 18pt;
+  font-size: 18px;
   font-weight: 500;
-  text-transform: uppercase;
   margin-bottom: var(--unter-text);
 }
 
@@ -144,23 +143,23 @@ p:last-child {
   }
 
   h1 {
-    font-size: 64pt;
+    font-size: 64px;
   }
 
   h2 {
-    font-size: 48pt;
+    font-size: 48px;
   }
 
   h3 {
-    font-size: 32pt;
+    font-size: 32px;
   }
 
   .titel {
-    font-size: 24pt;
+    font-size: 24px;
   }
 
   .lead {
-    font-size: 22pt;
+    font-size: 22px;
   }
 
   .highlight {
@@ -168,7 +167,7 @@ p:last-child {
   }
 
   .small {
-    font-size: 15px;
+    font-size: 26px;
   }
 }
 
@@ -189,6 +188,7 @@ section.hell2 {
 
 section.blick {
   padding: calc(var(--abschnitt) / 2) 0;
+  padding-bottom: calc(var(--abschnitt) / 2 + 40px);
 }
 
 .grid {
@@ -210,8 +210,8 @@ section.blick {
   line-height: 1.2;
   text-transform: uppercase;
   text-decoration: none;
-  padding: 14px 28px;
-  border-radius: 4px;
+  padding: 6px 28px;
+  border-radius: 8px;
 }
 
 .btn:hover,
@@ -232,11 +232,11 @@ section.blick {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 72px;
+  height: 65px;
 }
 
 .nav img {
-  height: 44px;
+  height: 55px;
   width: auto;
 }
 
@@ -270,19 +270,42 @@ section.blick {
 
 /* ===== Hero ===== */
 .hero {
-  background: linear-gradient(rgba(39, 51, 26, .55), rgba(39, 51, 26, .55)), url("images/hero-haus-auf-dem-dorf.jpg") center / cover;
+  min-height: 595px;
+  display: flex;
+  background: linear-gradient(rgba(39, 51, 26, .55), rgba(39, 51, 26, .55)),
+    url("images/hero-haus-auf-dem-dorf.jpg") center / cover;
   color: var(--hell);
   text-align: center;
-  padding: var(--abschnitt) 0;
+  padding: 24px 0;
+}
+
+.hero .wrap {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.hero-top {
+  margin-top: 20px;
+}
+
+.hero-bottom {
+  margin-bottom: 20px;
+}
+
+.hero h1 {
+  font-size: 32px;
 }
 
 .hero .lead {
-  margin-bottom: var(--unter-h);
+  font-size: 16px;
+  margin-bottom: 10px;
 }
 
 .hero p:not(.lead) {
   max-width: 900px;
-  margin: 0 auto var(--unter-text);
+  margin: 0 auto 20px;
 }
 
 /* ===== Auf einen Blick ===== */
@@ -292,8 +315,8 @@ section.blick {
 }
 
 .blick img {
-  width: 64px;
-  height: 64px;
+  width: 100px;
+  height: 100px;
   margin: 0 auto 8px;
 }
 
@@ -335,7 +358,7 @@ section.blick {
 }
 
 .textbox h3 {
-  font-size: 22pt;
+  font-size: 22px;
   margin-bottom: var(--unter-titel);
 }
 
@@ -376,7 +399,7 @@ section.blick {
 
 .kachel .titel {
   text-transform: uppercase;
-  font-size: 18pt;
+  font-size: 18px;
   line-height: 1.4;
 }
 
@@ -503,28 +526,53 @@ section.blick {
 }
 
 /* ===== Kontakt ===== */
-.kontakt-box {
+
+.kontakt-layout {
   display: flex;
   flex-direction: column;
+  gap: var(--unter-text);
+}
+
+.kontakt-text {
+  text-align: center;
+}
+
+.kontakt-box {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
   align-items: center;
   gap: var(--gap);
-  text-align: center;
+  text-align: left;
 }
 
 .kontakt-box img {
   width: 80px;
   height: 80px;
   border-radius: 50%;
+  border: 3px solid var(--dunkel);
   object-fit: cover;
 }
 
 @media (min-width: 768px) {
-  .kontakt-box {
+
+  .kontakt-layout {
     flex-direction: row;
-    justify-content: center;
+    align-items: center;
+    gap: var(--gap);
+  }
+
+  .kontakt-text {
+    flex: 1;
     text-align: left;
   }
+
+  .kontakt-box {
+    flex: 0 0 auto;
+  }
+
 }
+
 
 /* ===== Footer ===== */
 footer {
@@ -535,7 +583,7 @@ footer {
 }
 
 footer img {
-  height: 56px;
+  height: 64px;
   width: auto;
   margin: 0 auto 24px;
 }
@@ -555,4 +603,3 @@ footer p {
   margin: 0;
   line-height: 1.4;
 }
-
