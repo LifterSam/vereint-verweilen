@@ -10,46 +10,46 @@
   <link rel="stylesheet" href="style.css" />
 
   <style>
-    .quellen {
+    .sources {
       max-width: 900px;
       margin: 0 auto;
     }
 
-    .quellen h1 {
+    .sources h1 {
       margin-bottom: 40px;
     }
 
-    .quellen h2 {
+    .sources h2 {
       text-align: left;
       margin-top: 64px;
       margin-bottom: 24px;
     }
 
-    .quellen ul {
+    .sources ul {
       list-style: none;
       padding: 0;
     }
 
-    .quellen li {
+    .sources li {
       padding: 20px 0;
-      border-bottom: 1px solid var(--hell2);
+      border-bottom: 1px solid var(--light-secondary);
     }
 
-    .quellen li:first-child {
-      border-top: 1px solid var(--hell2);
+    .sources li:first-child {
+      border-top: 1px solid var(--light-secondary);
     }
 
-    .quellen strong {
+    .sources strong {
       display: block;
       margin-bottom: 4px;
     }
 
-    .quellen a {
+    .sources a {
       color: var(--orange-hover);
       word-break: break-word;
     }
 
-    .quellen img {
+    .sources img {
       display: block;
       width: 100%;
       max-height: 400px;
@@ -57,20 +57,20 @@
       margin-bottom: 16px;
     }
 
-    .quellen .zeitstempel {
+    .sources .timestamp {
       display: block;
       font-size: 14px;
       line-height: 1.4;
       margin-bottom: 8px;
     }
 
-    .copyright {
+    .copyright-notice {
       margin-top: 40px;
       padding: 24px;
-      background: var(--hell2);
+      background: var(--light-secondary);
     }
 
-    .zurueck {
+    .back-link {
       display: inline-block;
       margin-top: 40px;
     }
@@ -79,16 +79,35 @@
 
 <body>
 
-  <a href="index.html" class="zurueck">← Zurück zur Startseite</a>
+<header class="navigation">
+  <div class="container">
+    <a href="index.html">
+      <img src="images/logo-woveve.svg" alt="Woveve Logo" />
+    </a>
+
+    <nav>
+      <ul>
+        <li><a href="index.html#project">Projekt</a></li>
+        <li><a href="index.html#why-now">Warum jetzt?</a></li>
+        <li><a href="index.html#offer">Angebot</a></li>
+        <li><a href="index.html#impact">Wirkung</a></li>
+        <li><a href="index.html#team">Über uns</a></li>
+        <li><a href="index.html#support">Unterstützung</a></li>
+      </ul>
+    </nav>
+
+    <a href="index.html#contact" class="button">Kontakt</a>
+  </div>
+</header>
 
   <main>
-    <div class="wrap quellen">
+    <div class="container sources">
 
       <h1>Quellenverweise</h1>
 
       <p>
-        Auf dieser Seite sind etwaige Quellen (Bilder, Dokumente etc.) der verwendeten Inhalte auf unserer Website
-        aufgeführt.
+        Auf dieser Seite sind etwaige Quellen (Bilder, Dokumente etc.) der
+        verwendeten Inhalte auf unserer Website aufgeführt.
       </p>
 
 
@@ -104,7 +123,7 @@
 
           <strong>Bauernhaus</strong>
 
-          <span class="zeitstempel">Stand: Oktober 2026</span>
+          <span class="timestamp">Stand: Oktober 2026</span>
 
           <span>
             Quelle:
@@ -123,7 +142,7 @@
 
           <strong>Haus auf dem Dorf</strong>
 
-          <span class="zeitstempel">Stand: Oktober 2026</span>
+          <span class="timestamp">Stand: Oktober 2026</span>
 
           <span>
             Quelle:
@@ -142,7 +161,7 @@
 
           <strong>Brücke</strong>
 
-          <span class="zeitstempel">Stand: Oktober 2026</span>
+          <span class="timestamp">Stand: Oktober 2026</span>
 
           <span>
             Quelle:
@@ -161,7 +180,7 @@
 
           <strong>Hände</strong>
 
-          <span class="zeitstempel">Stand: Oktober 2026</span>
+          <span class="timestamp">Stand: Oktober 2026</span>
 
           <span>
             Quelle:
@@ -180,7 +199,7 @@
 
           <strong>Weinberg</strong>
 
-          <span class="zeitstempel">Stand: Oktober 2026</span>
+          <span class="timestamp">Stand: Oktober 2026</span>
 
           <span>
             Quelle:
@@ -195,7 +214,7 @@
 
       <h3>Eigene Bilder, Grafiken und Symbole</h3>
 
-      <div class="copyright">
+      <div class="copyright-notice">
 
         <p>
           Alle weiteren auf dieser Website verwendeten Bilder, Grafiken,
@@ -210,7 +229,7 @@
       </div>
 
 
-      <a class="zurueck" href="index.html">
+      <a class="back-link" href="index.html">
         ← Zurück zur Website
       </a>
 
