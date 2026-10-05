@@ -6,10 +6,10 @@
   --orange: #FFA233;
   --orange-hover: #CC7E1F;
 
-  --seite: 24px;
+  --seitenabstand: 24px;
   /* Seitenabstand */
-  --spalten: 4;
-  --gap: 16px;
+  --spaltenanzahl: 4;
+  --spaltenabstand: 16px;
   --abschnitt: 80px;
   /* über/unter Abschnitt */
   --unter-h: 40px;
@@ -25,17 +25,17 @@
 
 @media (min-width: 768px) {
   :root {
-    --seite: 40px;
-    --spalten: 8;
-    --gap: 24px;
+    --seitenabstand: 40px;
+    --spaltenanzahl: 8;
+    --spaltenabstand: 24px;
   }
 }
 
 @media (min-width: 1024px) {
   :root {
-    --seite: 64px;
-    --spalten: 12;
-    --gap: 32px;
+    --seitenabstand: 64px;
+    --spaltenanzahl: 12;
+    --spaltenabstand: 32px;
     --abschnitt: 160px;
     --unter-h: 80px;
     --unter-titel: 40px;
@@ -86,7 +86,7 @@ h3,
 }
 
 h1 {
-  font-size: 30px;
+  font-size: 32px;
   font-weight: 700;
   margin-bottom: var(--unter-h);
 }
@@ -94,14 +94,13 @@ h1 {
 h2 {
   font-size: 28px;
   font-weight: 700;
-  text-transform: uppercase;
-  text-align: center;
   margin-bottom: var(--unter-h);
 }
 
 h3 {
   font-size: 24px;
   font-weight: 600;
+  margin-top: auto;
   margin-bottom: var(--unter-h);
 }
 
@@ -175,7 +174,7 @@ p:last-child {
 .wrap {
   max-width: 1440px;
   margin: 0 auto;
-  padding: 0 var(--seite);
+  padding: 0 var(--seitenabstand);
 }
 
 section {
@@ -193,7 +192,7 @@ section.blick {
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(var(--spalten), 1fr);
+  grid-template-columns: repeat(var(--spaltenanzahl), 1fr);
   gap: var(--gap);
 }
 
@@ -474,7 +473,7 @@ section.blick {
 .kompetenzen {
   background: var(--dunkel);
   color: var(--hell);
-  padding: var(--box) var(--seite);
+  padding: var(--box) var(--seitenabstand);
   margin-top: var(--unter-text);
 }
 
