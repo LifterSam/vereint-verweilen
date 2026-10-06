@@ -138,7 +138,7 @@ p:last-child {
 
 @media (min-width: 768px) {
   body {
-    font-size: 20px;
+    font-size: 24px;
   }
 
   h1 {
@@ -166,7 +166,7 @@ p:last-child {
   }
 
   .small {
-    font-size: 26px;
+    font-size: 20px;
   }
 }
 
@@ -245,10 +245,11 @@ section.overview {
 .navigation nav {
   position: absolute;
   top: 65px;
-  left: 0;
-  right: 0;
+  right: var(--page-padding);
+  width: max-content;
+  min-width: 220px;
   display: none;
-  padding: 24px var(--page-padding);
+  padding: 24px;
   background: var(--light);
   border-bottom: 1px solid var(--light-secondary);
 }
@@ -297,17 +298,64 @@ section.overview {
 .menu-toggle span {
   display: block;
   width: 100%;
-  height: 2px;
+  height: 3px;
   background: var(--dark);
 }
 
+@media (min-width: 768px) {
+
+    .navigation ul a {
+    font-size: 20px;
+  }
+
+  .navigation .container {
+    height: 72px;
+  }
+
+  .navigation img {
+    height: 55px;
+  }
+
+  .navigation .button {
+    padding: 10px 14px;
+    font-size: 15px;
+  }
+
+  .navigation nav {
+    top: 72px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .navigation ul a {
+    font-size: 22px;
+  }
+
+  .navigation .container {
+    height: 80px;
+  }
+
+  .navigation img {
+    height: 70px;
+  }
+
+  .navigation .button {
+    padding: 14px 18px;
+    font-size: 18px;
+  }
+
+  .navigation nav {
+    top: 80px;
+    right: var(--page-padding);
+  }
+}
 
 
 /* ===== Hero ===== */
 .hero {
   min-height: 595px;
   display: flex;
-  background: url("images/hero-haus-auf-dem-dorf.jpg") center / cover;
+  background: linear-gradient(rgba(48, 65, 34, 0.65), rgba(13, 17, 9, 0.65)),url("images/hero-haus-auf-dem-dorf.jpg") center / cover;
   color: var(--light);
   text-align: center;
   padding: 10px 0 24px;
@@ -374,13 +422,7 @@ section.overview {
   display: grid;
   grid-template-columns: 1fr;
   gap: var(--column-gap);
-  align-items: center;
-}
-
-@media (min-width: 1024px) {
-  .two-column {
-    grid-template-columns: 1fr 1fr;
-  }
+  align-items: start;
 }
 
 .text-box {
@@ -414,6 +456,25 @@ section.overview {
 }
 
 
+@media (min-width: 1024px) {
+  .two-column {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  #offer .two-column {
+    align-items: center;
+  }
+
+  #offer .two-column > p {
+    margin-bottom: 0;
+  }
+
+  #offer .two-column img {
+    width: 70%;
+    margin: 0 auto;
+  }
+}
+
 /* ===== Impact Cards ===== */
 .card {
   background: var(--dark);
@@ -432,7 +493,6 @@ section.overview {
 
 .card .title {
   text-transform: uppercase;
-  font-size: 18px;
   line-height: 1.4;
 }
 
@@ -440,12 +500,13 @@ section.overview {
   line-height: 1.5;
   margin-bottom: 6px;
   padding-left: 1em;
-  text-indent: -1em;
-  font-size: 15px;
+  position: relative;
 }
 
 .card li::before {
-  content: "• ";
+  content: "•";
+  position: absolute;
+  left: 0;
 }
 
 @media (min-width: 768px) {
@@ -507,7 +568,7 @@ section.overview {
 }
 
 .team .quote {
-  font-size: 15px;
+  
   line-height: 1.4;
   font-style: italic;
   margin-top: 8px;
@@ -536,7 +597,6 @@ section.overview {
 .skills li {
   font-weight: 700;
   text-transform: uppercase;
-  font-size: 14px;
   line-height: 1.6;
 }
 
