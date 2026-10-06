@@ -6,7 +6,7 @@
   --orange: #FFA233;
   --orange-hover: #CC7E1F;
 
-  --page-padding: 24px;
+  --page-padding: 18px;
   --column-count: 4;
   --column-gap: 16px;
   --section-spacing: 80px;
@@ -54,8 +54,8 @@ html {
 
 body {
   font-family: var(--text-font);
-  font-size: 14px;
-  line-height: 2;
+  font-size: 15px;
+  line-height: 1.6;
   font-weight: 400;
   color: var(--dark);
   background: var(--light);
@@ -93,6 +93,7 @@ h2 {
   font-weight: 700;
   margin-bottom: var(--heading-spacing);
   text-align: center;
+  text-transform: uppercase;
 }
 
 h3 {
@@ -100,12 +101,13 @@ h3 {
   font-weight: 600;
   margin-top: auto;
   margin-bottom: var(--heading-spacing);
+  text-transform: uppercase;
 }
 
 .title {
   font-size: 22px;
   font-weight: 600;
-  line-height: 2;
+  line-height: 1.4;
   margin-bottom: var(--title-spacing);
 }
 
@@ -220,6 +222,7 @@ section.overview {
 
 
 /* ===== Navigation ===== */
+
 .navigation {
   position: sticky;
   top: 0;
@@ -231,18 +234,33 @@ section.overview {
 .navigation .container {
   display: flex;
   align-items: center;
-  justify-content: space-between;
   height: 65px;
 }
 
 .navigation img {
-  height: 55px;
+  height: 40px;
   width: auto;
 }
 
-.navigation ul {
+.navigation nav {
+  position: absolute;
+  top: 65px;
+  left: 0;
+  right: 0;
   display: none;
-  gap: 24px;
+  padding: 24px var(--page-padding);
+  background: var(--light);
+  border-bottom: 1px solid var(--light-secondary);
+}
+
+.navigation nav.is-open {
+  display: block;
+}
+
+.navigation ul {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
 .navigation ul a {
@@ -258,15 +276,31 @@ section.overview {
 }
 
 .navigation .button {
-  padding: 10px 20px;
-  font-size: 14px;
+  margin-left: auto;
+  padding: 8px 11px;
+  font-size: 12px;
 }
 
-@media (min-width: 1024px) {
-  .navigation ul {
-    display: flex;
-  }
+.menu-toggle {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 32px;
+  height: 24px;
+  padding: 0;
+  margin-left: 16px;
+  border: 0;
+  background: none;
+  cursor: pointer;
 }
+
+.menu-toggle span {
+  display: block;
+  width: 100%;
+  height: 2px;
+  background: var(--dark);
+}
+
 
 
 /* ===== Hero ===== */
@@ -276,7 +310,7 @@ section.overview {
   background: url("images/hero-haus-auf-dem-dorf.jpg") center / cover;
   color: var(--light);
   text-align: center;
-  padding: 24px 0;
+  padding: 10px 0 24px;
 }
 
 .hero .container {
@@ -287,11 +321,11 @@ section.overview {
 }
 
 .hero-top {
-  margin-top: 20px;
+  margin-top: 5px;
 }
 
 .hero-bottom {
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 .hero .lead {
@@ -314,7 +348,7 @@ section.overview {
 .overview img {
   width: 100px;
   height: 100px;
-  margin: 0 auto 8px;
+  margin: 10px auto 10px;
 }
 
 .overview .title {
@@ -448,8 +482,13 @@ section.overview {
   text-align: center;
 }
 
+.team .grid {
+  margin-top: var(--text-spacing);
+  row-gap: 40px;
+}
+
 .team .person {
-  grid-column: span 2;
+  grid-column: 1 / -1;
 }
 
 .team .person img {
@@ -582,7 +621,7 @@ footer {
   background: var(--dark);
   color: var(--light);
   text-align: center;
-  padding: var(--section-spacing) 0 40px;
+  padding: 40px 0 40px;
 }
 
 footer img {
@@ -605,4 +644,63 @@ footer ul {
 footer p {
   margin: 0;
   line-height: 1.4;
+}
+
+
+/* ===== Sources ===== */
+
+.sources {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.sources ul {
+  list-style: none;
+}
+
+.sources li {
+  padding: 20px 0;
+  border-bottom: 1px solid var(--light-secondary);
+}
+
+.sources li:first-child {
+  border-top: 1px solid var(--light-secondary);
+}
+
+.sources strong {
+  display: block;
+  margin-bottom: 4px;
+}
+
+.sources img {
+  width: 100%;
+  max-height: 400px;
+  object-fit: cover;
+  margin-bottom: 16px;
+}
+
+.sources .timestamp {
+  display: block;
+  font-size: 14px;
+  line-height: 1.4;
+  margin-bottom: 8px;
+}
+
+.copyright-notice {
+  margin-top: 40px;
+  padding: 24px;
+  background: var(--light-secondary);
+}
+
+.back-link {
+  display: inline-block;
+  margin-top: 40px;
+}
+
+/* ===== Information pages ===== */
+
+.info-page h1,
+.info-page h2,
+.info-page h3 {
+  text-align: left;
 }

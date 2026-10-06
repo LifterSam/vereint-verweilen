@@ -10,6 +10,7 @@
     />
     <link rel="stylesheet" href="fonts/fonts.css" />
     <link rel="stylesheet" href="style.css" />
+    <script src="script.js"></script>
   </head>
 
   <body>
@@ -32,12 +33,18 @@
         </nav>
 
         <a href="#contact" class="button">Kontakt</a>
+
+        <!-- Hamburger Menue Button -->
+        <button class="menu-toggle" type="button" aria-label="Menü öffnen">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
       </div>
     </header>
 
-
     <main id="top">
-
       <!-- Hero -->
       <section class="hero" id="project">
         <div class="container">
@@ -52,7 +59,7 @@
           <div class="hero-bottom">
             <p>
               Wir entwickeln einen generationenübergreifenden Wohn- und
-              Arbeitsort für etwa 5 bis 15 Personen. Das Projekt verbindet
+              Arbeitsort für etwa 10 bis 15 Personen. Das Projekt verbindet
               private Wohnbereiche, gemeinschaftliche Infrastruktur,
               Werkstätten, Co-Working und regionale Angebote in Bildung,
               Gesundheit, Kultur, Handwerk und Nachhaltigkeit.
@@ -62,7 +69,6 @@
           </div>
         </div>
       </section>
-
 
       <!-- Auf einen Blick -->
       <section class="overview">
@@ -93,14 +99,11 @@
             <div>
               <img src="images/icon-nutzung.svg" alt="" />
               <p class="title">Nutzung</p>
-              <p class="small">
-                Wohnen, Werkstätten, Co-Working, Begegnung
-              </p>
+              <p class="small">Wohnen, Werkstätten, Co-Working, Begegnung</p>
             </div>
           </div>
         </div>
       </section>
-
 
       <!-- Warum jetzt -->
       <section class="light-secondary" id="why-now">
@@ -128,7 +131,6 @@
         </div>
       </section>
 
-
       <!-- Angebot -->
       <section id="offer">
         <div class="container">
@@ -152,7 +154,7 @@
           </div>
 
           <h3 class="title" style="margin-top: var(--text-spacing)">
-            Das Konzept umfasst:
+            DAS KONZEPT UMFASST
           </h3>
 
           <ul class="concept">
@@ -177,8 +179,8 @@
             </li>
 
             <li>
-              <strong>Nachhaltige Versorgungs- und Nutzungskonzepte</strong> für
-              einen ressourcenschonenden Alltag
+              <strong>Versorgungs- und Nutzungskonzepte</strong> für einen
+              ressourcenschonenden nachhaltigen Alltag
             </li>
 
             <li>
@@ -189,26 +191,14 @@
         </div>
       </section>
 
-
       <!-- Wirkung -->
       <section class="light-secondary" id="impact">
         <div class="container">
           <h2>Wirkung für Region und Gemeinwohl</h2>
 
-          <p>
-            Wer Vereint Verweilen unterstützt, investiert nicht nur in ein
-            Wohnprojekt, sondern in soziale Infrastruktur, nachhaltige
-            Regionalentwicklung und ein übertragbares Modell für
-            gemeinschaftliches Wohnen und Arbeiten im ländlichen Raum.
-          </p>
-
           <div class="grid" style="margin-top: var(--text-spacing)">
-
             <article class="card">
-              <img
-                src="images/wirkung-kommunen-weinberg.jpg"
-                alt=""
-              />
+              <img src="images/wirkung-kommunen-weinberg.jpg" alt="" />
 
               <div>
                 <h3 class="title">Für Kommunen</h3>
@@ -223,12 +213,8 @@
               </div>
             </article>
 
-
             <article class="card">
-              <img
-                src="images/wirkung-foerderer-bruecke.jpg"
-                alt=""
-              />
+              <img src="images/wirkung-foerderer-bruecke.jpg" alt="" />
 
               <div>
                 <h3 class="title">Für Förderer</h3>
@@ -243,12 +229,8 @@
               </div>
             </article>
 
-
             <article class="card">
-              <img
-                src="images/wirkung-geldgeber-hand-halten.jpg"
-                alt=""
-              />
+              <img src="images/wirkung-geldgeber-hand-halten.jpg" alt="" />
 
               <div>
                 <h3 class="title">Für Geldgeber und Partner</h3>
@@ -258,15 +240,14 @@
                   <li>interdisziplinäre Initiativgruppe</li>
                   <li>klare Nutzungslogik</li>
                   <li>realistische nächste Entwicklungsschritte</li>
-                  <li>konkrete Kooperations- und Finanzierungsmöglichkeiten</li>
+                  <li>konkrete Kooperationspartner</li>
+                  <li>mögliche Finanzierungswege</li>
                 </ul>
               </div>
             </article>
-
           </div>
         </div>
       </section>
-
 
       <!-- Banner -->
       <section class="banner">
@@ -275,13 +256,12 @@
             Wer Vereint Verweilen unterstützt, investiert nicht nur in ein
             Wohnprojekt, sondern in soziale Infrastruktur, nachhaltige
             Regionalentwicklung und ein übertragbares Modell für
-            gemeinschaftliches Wohnen und Arbeiten im ländlichen R
+            gemeinschaftliches Wohnen und Arbeiten im ländlichen Raum.
           </p>
 
           <a href="#contact" class="button">Gespräch vereinbaren</a>
         </div>
       </section>
-
 
       <!-- Team -->
       <section class="light-secondary team" id="team">
@@ -293,25 +273,19 @@
             Hintergründen bringt das Vorhaben sicher in die Umsetzung.
           </p>
 
-          <div class="grid" style="margin-top: var(--text-spacing)">
-
+          <div class="grid">
             <div class="person">
               <img src="images/thomas.png" alt="Thomas Engelmann" />
-              <p class="title" style="margin-bottom: 0">
-                Thomas Engelmann
-              </p>
-              <p class="role">Elektriker</p>
-              <p class="quote">
-                „Unter den Blinden ist der Einarmige Bandit.“
-              </p>
+              <p class="title" style="margin-bottom: 0">Thomas Engelmann</p>
+              <p class="role">M.Sc. Elektrotechnik und
+Informationstechnik</p>
+              <p class="quote">„Unter den Blinden ist der Einarmige Bandit.“</p>
             </div>
 
             <div class="person">
               <img src="images/stefanie.png" alt="Stefanie Schmidt" />
-              <p class="title" style="margin-bottom: 0">
-                Stefanie Schmidt
-              </p>
-              <p class="role">Basteltante</p>
+              <p class="title" style="margin-bottom: 0">Stefanie Schmidt</p>
+              <p class="role">Ergotherapeutin, B.A.</p>
               <p class="quote">
                 „Wenn ich eine Zeitung wär, würde ich &gt;The Daily Struggle&lt;
                 heißen.“
@@ -319,27 +293,21 @@
             </div>
 
             <div class="person">
-              <img src="images/robin.png" alt="Robin Dunkel" />
-              <p class="title" style="margin-bottom: 0">
-                Robin Dunkel
-              </p>
-              <p class="role">Holzwurm</p>
-              <p class="quote">
-                „Wer doppelt kauft, kauft zweimal.“
-              </p>
-            </div>
-
-            <div class="person">
               <img src="images/tilo.png" alt="Tilo Gerlach" />
-              <p class="title" style="margin-bottom: 0">
-                Tilo Gerlach
-              </p>
-              <p class="role">Pixelschubser</p>
+              <p class="title" style="margin-bottom: 0">Tilo Gerlach</p>
+              <p class="role">Dozent Erwachsenenbildung,
+Grafikdesigner</p>
               <p class="quote">
                 „Parkour ist wie das Leben - nur völlig anders.“
               </p>
             </div>
 
+            <div class="person">
+              <img src="images/robin.png" alt="Robin Dunkel" />
+              <p class="title" style="margin-bottom: 0">Robin Dunkel</p>
+              <p class="role">Tischlermeister</p>
+              <p class="quote">„Wer doppelt kauft, kauft zweimal.“</p>
+            </div>
           </div>
         </div>
 
@@ -354,14 +322,12 @@
         </div>
       </section>
 
-
       <!-- Unterstützung -->
       <section class="support" id="support">
         <div class="container">
           <h2>Wie Sie das Projekt unterstützen können</h2>
 
           <div class="grid">
-
             <div>
               <h3 class="title">Förderung und Finanzierung</h3>
               <p>
@@ -400,11 +366,9 @@
                 Grundstück mit Entwicklungspotenzial.
               </p>
             </div>
-
           </div>
         </div>
       </section>
-
 
       <!-- Kontakt -->
       <section id="contact" class="light-secondary">
@@ -412,7 +376,6 @@
           <h2>Lassen Sie uns ins Gespräch kommen</h2>
 
           <div class="contact-layout">
-
             <div class="contact-text">
               <p>
                 Sie vertreten eine Kommune, Stiftung oder Förderinstitution,
@@ -425,21 +388,18 @@
             <div class="contact-box">
               <img src="images/tilo.png" alt="Tilo Gerlach" />
 
-              <p class="small">
+              <p class="lead">
                 <strong>Tilo Gerlach</strong><br />
                 <a href="mailto:vereintverweilen@posteo.de">
-                  vereintverweilen@posteo.de
-                </a><br />
-                <a href="tel:+491637424097">0163 74 24 097</a>
+                  vereintverweilen@posteo.de </a
+                ><br />
+                <a href="tel:+491637424097">+49 163 74 24 097</a>
               </p>
             </div>
-
           </div>
         </div>
       </section>
-
     </main>
-
 
     <footer>
       <div class="container">
@@ -458,6 +418,5 @@
         </p>
       </div>
     </footer>
-
   </body>
 </html>
