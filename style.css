@@ -27,7 +27,7 @@
   }
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 1200px) {
   :root {
     --page-padding: 64px;
     --column-count: 12;
@@ -232,6 +232,7 @@ section.overview {
 }
 
 .navigation .container {
+  position: relative;
   display: flex;
   align-items: center;
   height: 65px;
@@ -326,7 +327,7 @@ section.overview {
   }
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 1200px) {
   .navigation ul a {
     font-size: 22px;
   }
@@ -410,7 +411,7 @@ section.overview {
   }
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 1200px) {
   .overview .grid > div {
     grid-column: span 3;
   }
@@ -455,8 +456,14 @@ section.overview {
   font-weight: 700;
 }
 
+@media (min-width: 768px) and (max-width: 1199px) {
+  #offer .two-column img {
+    width: 75%;
+    margin: 0 auto;
+  }
+}
 
-@media (min-width: 1024px) {
+@media (min-width: 1200px) {
   .two-column {
     grid-template-columns: 1fr 1fr;
   }
@@ -515,7 +522,7 @@ section.overview {
   }
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 1200px) {
   .card {
     grid-column: span 4;
   }
@@ -606,7 +613,7 @@ section.overview {
   }
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 1200px) {
   .team .person {
     grid-column: span 3;
   }
@@ -623,7 +630,7 @@ section.overview {
   margin-bottom: 0;
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 1200px) {
   .support .grid > div {
     grid-column: span 6;
   }
