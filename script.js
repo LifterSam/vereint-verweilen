@@ -11,4 +11,17 @@ document.addEventListener("DOMContentLoaded", () => {
       navigation.classList.remove("is-open");
     });
   });
+
+  const impactDetails = document.querySelectorAll("#impact .card details");
+  const tabletView = window.matchMedia("(min-width: 768px)");
+
+  function updateImpactCards() {
+    impactDetails.forEach((details) => {
+      details.open = tabletView.matches;
+    });
+  }
+
+  updateImpactCards();
+
+  tabletView.addEventListener("change", updateImpactCards);
 });

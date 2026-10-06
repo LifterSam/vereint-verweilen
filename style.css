@@ -197,7 +197,7 @@ section.overview {
   gap: var(--column-gap);
 }
 
-.grid > * {
+.grid>* {
   grid-column: 1 / -1;
 }
 
@@ -305,7 +305,7 @@ section.overview {
 
 @media (min-width: 768px) {
 
-    .navigation ul a {
+  .navigation ul a {
     font-size: 20px;
   }
 
@@ -356,7 +356,7 @@ section.overview {
 .hero {
   min-height: 595px;
   display: flex;
-  background: linear-gradient(rgba(48, 65, 34, 0.65), rgba(13, 17, 9, 0.65)),url("images/hero-haus-auf-dem-dorf.jpg") center / cover;
+  background: linear-gradient(rgba(48, 65, 34, 0.65), rgba(13, 17, 9, 0.65)), url("images/hero-haus-auf-dem-dorf.jpg") center / cover;
   color: var(--light);
   text-align: center;
   padding: 10px 0 24px;
@@ -389,7 +389,7 @@ section.overview {
 
 
 /* ===== Overview ===== */
-.overview .grid > div {
+.overview .grid>div {
   grid-column: span 2;
   text-align: center;
 }
@@ -406,13 +406,13 @@ section.overview {
 }
 
 @media (min-width: 768px) {
-  .overview .grid > div {
+  .overview .grid>div {
     grid-column: span 2;
   }
 }
 
 @media (min-width: 1200px) {
-  .overview .grid > div {
+  .overview .grid>div {
     grid-column: span 3;
   }
 }
@@ -472,7 +472,7 @@ section.overview {
     align-items: center;
   }
 
-  #offer .two-column > p {
+  #offer .two-column>p {
     margin-bottom: 0;
   }
 
@@ -494,13 +494,18 @@ section.overview {
   object-fit: cover;
 }
 
-.card div {
-  padding: var(--box-padding);
+.card details > div {
+  padding: 0 var(--box-padding) var(--box-padding);
 }
 
-.card .title {
-  text-transform: uppercase;
+.card summary {
+  padding: var(--box-padding);
+  font-family: var(--heading-font);
+  font-size: 22px;
+  font-weight: 600;
   line-height: 1.4;
+  text-transform: uppercase;
+  cursor: pointer;
 }
 
 .card li {
@@ -520,11 +525,15 @@ section.overview {
   .card {
     grid-column: span 4;
   }
-}
 
-@media (min-width: 1200px) {
-  .card {
-    grid-column: span 4;
+  .card summary {
+    list-style: none;
+    cursor: default;
+    pointer-events: none;
+  }
+
+  .card summary::-webkit-details-marker {
+    display: none;
   }
 }
 
@@ -575,7 +584,7 @@ section.overview {
 }
 
 .team .quote {
-  
+
   line-height: 1.4;
   font-style: italic;
   margin-top: 8px;
@@ -621,7 +630,7 @@ section.overview {
 
 
 /* ===== Support ===== */
-.support .grid > div {
+.support .grid>div {
   text-align: center;
 }
 
@@ -631,7 +640,7 @@ section.overview {
 }
 
 @media (min-width: 1200px) {
-  .support .grid > div {
+  .support .grid>div {
     grid-column: span 6;
   }
 }
