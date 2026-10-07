@@ -443,7 +443,7 @@ section.overview {
 
 .concept li {
   padding-left: 1.2em;
-  text-indent: -1.2em;
+  text-indent: -0.5em;
   margin-bottom: 8px;
   line-height: 1.6;
 }
