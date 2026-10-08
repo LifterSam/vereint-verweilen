@@ -3,6 +3,26 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Open Graph: tells platforms that this is a website -->
+    <meta property="og:type" content="website" />
+    <!-- Open Graph: language/region of the page -->
+    <meta property="og:locale" content="de_DE" />
+    <!-- Open Graph: the canonical URL of the website -->
+    <meta property="og:url" content="https://vereint-verweilen.de/" />
+    <!-- Open Graph: title shown in link previews -->
+    <meta property="og:title" content="Wohnprojekt Vereint Verweilen" />
+    <!-- Open Graph: description shown in link previews -->
+    <meta
+      property="og:description"
+      content="Generationenübergreifender Wohn- und Arbeitsort im ländlichen Raum rund um Leipzig."
+    />
+    <!-- Open Graph: image shown in link previews -->
+    <meta
+      property="og:image"
+      content="https://vereint-verweilen.de/images/og-image.jpg"
+    />
+
     <title>Wohnprojekt Vereint Verweilen</title>
     <meta
       name="description"
@@ -10,6 +30,8 @@
     />
     <link rel="stylesheet" href="fonts/fonts.css" />
     <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="/images/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="/images/apple-touch-icon.png" />
     <script src="script.js"></script>
   </head>
 
@@ -191,69 +213,69 @@
         </div>
       </section>
 
-<!-- Wirkung -->
-<section class="light-secondary" id="impact">
-  <div class="container">
-    <h2>Wirkung für Region und Gemeinwohl</h2>
+      <!-- Wirkung -->
+      <section class="light-secondary" id="impact">
+        <div class="container">
+          <h2>Wirkung für Region und Gemeinwohl</h2>
 
-    <div class="grid" style="margin-top: var(--text-spacing)">
-      <article class="card">
-        <img src="images/wirkung-kommunen-weinberg.jpg" alt="" />
+          <div class="grid" style="margin-top: var(--text-spacing)">
+            <article class="card">
+              <img src="images/wirkung-kommunen-weinberg.jpg" alt="" />
 
-        <details>
-          <summary>Für Kommunen</summary>
+              <details>
+                <summary>Für Kommunen</summary>
 
-          <div>
-            <ul>
-              <li>Belebung ländlicher Räume</li>
-              <li>sinnvolle Nutzung von Bestand oder Flächen</li>
-              <li>neue Begegnungs- und Angebotsstrukturen</li>
-              <li>regionale Wertschöpfung</li>
-              <li>Attraktivität für Zuzug und Bleiben</li>
-            </ul>
+                <div>
+                  <ul>
+                    <li>Belebung ländlicher Räume</li>
+                    <li>sinnvolle Nutzung von Bestand oder Flächen</li>
+                    <li>neue Begegnungs- und Angebotsstrukturen</li>
+                    <li>regionale Wertschöpfung</li>
+                    <li>Attraktivität für Zuzug und Bleiben</li>
+                  </ul>
+                </div>
+              </details>
+            </article>
+
+            <article class="card">
+              <img src="images/wirkung-foerderer-bruecke.jpg" alt="" />
+
+              <details>
+                <summary>Für Förderer</summary>
+
+                <div>
+                  <ul>
+                    <li>Beitrag zu Nachhaltigkeit und Gemeinwohl</li>
+                    <li>soziale Innovation im ländlichen Raum</li>
+                    <li>generationenübergreifende Teilhabe</li>
+                    <li>Integration und Solidarität</li>
+                    <li>Modellcharakter für übertragbare Lösungen</li>
+                  </ul>
+                </div>
+              </details>
+            </article>
+
+            <article class="card">
+              <img src="images/wirkung-geldgeber-hand-halten.jpg" alt="" />
+
+              <details>
+                <summary>Für Geldgeber und Partner</summary>
+
+                <div>
+                  <ul>
+                    <li>überschaubare Projektgröße</li>
+                    <li>interdisziplinäre Initiativgruppe</li>
+                    <li>klare Nutzungslogik</li>
+                    <li>realistische nächste Entwicklungsschritte</li>
+                    <li>konkrete Kooperationspartner</li>
+                    <li>mögliche Finanzierungswege</li>
+                  </ul>
+                </div>
+              </details>
+            </article>
           </div>
-        </details>
-      </article>
-
-      <article class="card">
-        <img src="images/wirkung-foerderer-bruecke.jpg" alt="" />
-
-        <details>
-          <summary>Für Förderer</summary>
-
-          <div>
-            <ul>
-              <li>Beitrag zu Nachhaltigkeit und Gemeinwohl</li>
-              <li>soziale Innovation im ländlichen Raum</li>
-              <li>generationenübergreifende Teilhabe</li>
-              <li>Integration und Solidarität</li>
-              <li>Modellcharakter für übertragbare Lösungen</li>
-            </ul>
-          </div>
-        </details>
-      </article>
-
-      <article class="card">
-        <img src="images/wirkung-geldgeber-hand-halten.jpg" alt="" />
-
-        <details>
-          <summary>Für Geldgeber und Partner</summary>
-
-          <div>
-            <ul>
-              <li>überschaubare Projektgröße</li>
-              <li>interdisziplinäre Initiativgruppe</li>
-              <li>klare Nutzungslogik</li>
-              <li>realistische nächste Entwicklungsschritte</li>
-              <li>konkrete Kooperationspartner</li>
-              <li>mögliche Finanzierungswege</li>
-            </ul>
-          </div>
-        </details>
-      </article>
-    </div>
-  </div>
-</section>
+        </div>
+      </section>
 
       <!-- Banner -->
       <section class="banner">
@@ -283,9 +305,10 @@
             <div class="person">
               <img src="images/thomas.png" alt="Thomas Engelmann" />
               <p class="title" style="margin-bottom: 0">Thomas Engelmann</p>
-              <p class="role">M.Sc. Elektro- und
-Informationstechnik</p>
-              <p class="quote">„Reparieren, Erfinden, Verbessern - miteinander.“</p>
+              <p class="role">M.Sc. Elektro- und Informationstechnik</p>
+              <p class="quote">
+                „Reparieren, Erfinden, Verbessern - miteinander.“
+              </p>
             </div>
 
             <div class="person">
@@ -293,15 +316,15 @@ Informationstechnik</p>
               <p class="title" style="margin-bottom: 0">Stefanie Schmidt</p>
               <p class="role">Ergotherapeutin, B.A.</p>
               <p class="quote">
-                „Menschen wollen verstanden werden – in ihren Worten und ihrem Handeln.“
+                „Menschen wollen verstanden werden – in ihren Worten und ihrem
+                Handeln.“
               </p>
             </div>
 
             <div class="person">
               <img src="images/tilo.png" alt="Tilo Gerlach" />
               <p class="title" style="margin-bottom: 0">Tilo Gerlach</p>
-              <p class="role">Erwachsenenbildung,
-Grafikdesigner</p>
+              <p class="role">Erwachsenenbildung, Grafikdesigner</p>
               <p class="quote">
                 „Visualisierung schafft Verständnis, Bildung verbindet.“
               </p>
@@ -311,7 +334,10 @@ Grafikdesigner</p>
               <img src="images/robin.png" alt="Robin Dunkel" />
               <p class="title" style="margin-bottom: 0">Robin Dunkel</p>
               <p class="role">Tischlermeister</p>
-              <p class="quote">„Mit Holz bauen, mit den Händen schaffen, lebendig und beständig.“</p>
+              <p class="quote">
+                „Mit Holz bauen, mit den Händen schaffen, lebendig und
+                beständig.“
+              </p>
             </div>
           </div>
         </div>
