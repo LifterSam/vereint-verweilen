@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://vereint-verweilen.de/sitemap.xml

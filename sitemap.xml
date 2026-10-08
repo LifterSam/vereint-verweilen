@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- Sitemap: tells search engines which pages belong to the website -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- Main homepage -->
+  <url>
+    <loc>https://vereint-verweilen.de/</loc>
+  </url>
+
+  <!-- Imprint page -->
+  <url>
+    <loc>https://vereint-verweilen.de/impressum.html</loc>
+  </url>
+
+  <!-- Privacy policy page -->
+  <url>
+    <loc>https://vereint-verweilen.de/datenschutz.html</loc>
+  </url>
+
+  <!-- Sources/references page -->
+  <url>
+    <loc>https://vereint-verweilen.de/quellenverweise.html</loc>
+  </url>
+
+</urlset>
